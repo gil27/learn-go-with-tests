@@ -13,5 +13,11 @@ func (d Dictionary) Search(word string) (string, error) {
     return "", ErrNotFound
   }
 
-	return definition, nil
+  return definition, nil
 }
+
+func (d Dictionary) Add(word, definition string) {
+  d[word] = definition
+}
+
+// parei aqui: https://quii.gitbook.io/learn-go-with-tests/go-fundamentals/maps#write-the-test-first-3
